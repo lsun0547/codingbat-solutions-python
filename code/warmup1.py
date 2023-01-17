@@ -46,20 +46,20 @@ def pos_neg(a, b, negative):
 #Given a string, return a new string where "not " has been added to the front. However, if
 #the string already begins with "not", return the string unchanged.
 def not_string(str):
-  return str if str[:3] == "not" else "not " + str
+  return str if str[: 3] == "not" else "not " + str
 
 #Given a non-empty string and an int n, return a new string where the char at index n has
 #been removed. The value of n will be a valid index of a char in the original string (i.e. n will
 #be in the range 0..len(str)-1 inclusive).
 def missing_char(str, n):
-  return str[:n] + str[n+1:]
+  return str[: n] + str[n + 1 :]
 
 #Given a string, return a new string where the first and last chars have been exchanged.
 def front_back(str):
-  return str if len(str) <= 1 else str[len(str)-1] + str[1:-1] + str[0]
+  return str if len(str) <= 1 else str[len(str) - 1] + str[1: -1] + str[0]
 
 #Given a string, we'll say that the front is the first 3 chars of the string. If the string length
 #is less than 3, the front is whatever is there. Return a new string which is 3 copies of the
 #front.
 def front3(str):
-  return str[:3] * 3
+  return str[: 3] * 3
